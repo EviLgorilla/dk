@@ -1,12 +1,20 @@
-import React from 'react';
-import './App.css';
+import React, { FC } from "react";
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+]);
+
+const App: FC = () => {
   return (
     <div className="App">
-      CLASSIC REACT APP
+      <RouterProvider router={router} />
     </div>
   );
-}
+};
 
 export default App;
